@@ -40,7 +40,28 @@ export default function CatalogItem({ catalogItem  }) {
           ))}
         </ul>
       </div>
-      
+           {/* <div className='d-flex flex-row'>
+                  <div className='d-flex flex-column col'>
+                    <div className='d-flex flex-row'>
+                      <img src="/Catalog/square.svg" className='icon' alt="Площадь" />
+                      <p className='txt'>{article.text1}</p>
+                    </div>
+                    <div className='d-flex flex-row'>
+                      <img src="/Catalog/bed.svg" className='icon' alt="Комнаты" />
+                      <p className='txt' dangerouslySetInnerHTML={{ __html: article.text2 }} />
+                    </div>
+                  </div>
+                  <div className='d-flex flex-column col'>
+                    <div className='d-flex flex-row'>
+                      <img src="/Catalog/size.svg" className='icon' alt="Размеры" />
+                      <p className='txt'>{article.text3}</p>
+                    </div>
+                    <div className='d-flex flex-row'>
+                      <img src="/Catalog/garage.svg" className='icon' alt="Гараж" />
+                      <p className='txt'>{article.text4}</p>
+                    </div>
+                  </div>
+                </div> */}
       <style jsx>{`
         .item-container {
           max-width: 1200px;

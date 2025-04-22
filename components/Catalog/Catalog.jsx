@@ -15,7 +15,7 @@ function Catalog() {
         return response.json();
       })
       .then(data => {
-        setArticles(data.slice(0, 6));
+        setArticles(data.slice(0, 4));
         console.log(data);
       })
       .catch(error => {
@@ -37,35 +37,13 @@ function Catalog() {
             >
               <div className="article-card">
                 <img src={`/Catalog/${article.imgName}.jpg`} alt={article.imgName} />
-                <h4>{article.imgName}</h4>
-                
-                <div className='d-flex flex-row'>
-                  <div className='d-flex flex-column col'>
-                    <div className='d-flex flex-row'>
-                      <img src="/Catalog/square.svg" className='icon' alt="Площадь" />
-                      <p className='txt'>{article.text1}</p>
-                    </div>
-                    <div className='d-flex flex-row'>
-                      <img src="/Catalog/bed.svg" className='icon' alt="Комнаты" />
-                      <p className='txt' dangerouslySetInnerHTML={{ __html: article.text2 }} />
-                    </div>
+                <div className="content-overlay">
+                  <h4>{article.title}</h4>
+                  <div className="tags">
+                    {article.tags.map(tag => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
-                  <div className='d-flex flex-column col'>
-                    <div className='d-flex flex-row'>
-                      <img src="/Catalog/size.svg" className='icon' alt="Размеры" />
-                      <p className='txt'>{article.text3}</p>
-                    </div>
-                    <div className='d-flex flex-row'>
-                      <img src="/Catalog/garage.svg" className='icon' alt="Гараж" />
-                      <p className='txt'>{article.text4}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="tags">
-                  {article.tags.map(tag => (
-                    <span key={tag}>{tag}</span>
-                  ))}
                 </div>
               </div>
             </Link>
