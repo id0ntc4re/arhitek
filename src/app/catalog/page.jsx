@@ -1,5 +1,5 @@
 // src/MainBlog.js
-import BlogComponent from '../../../components/Blog/Blog';
+import Catalog from '../../../components/Catalog/Catalog';
 
 export const metadata = {
     title: "Блог о дизайне интерьера и архитектуре домов",
@@ -42,10 +42,10 @@ export const metadata = {
   },
   };
 
-export default function MainBlog(){
+export default function PageCatalog(){
     return (
         <>
-            <BlogComponent />
+            <Catalog />
         </>
         
     );

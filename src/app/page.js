@@ -3,7 +3,7 @@ import Hero from "../../components/Home/Hero/Hero";
 // import Projects from "../../components/Home/Projects/Projects";
 
 import Services from "../../components/Home/Services/Services";
-import Blog from "../../components/Blog/Blog";
+import Blog from "../../components/Catalog/Catalog";
 import Advantages from "../../components/Home/Advantages/Advantages";
 // import Form from "../../components/Home/Form/Form";
 import Quiz from '../../components/QuizEVG/Quiz'
