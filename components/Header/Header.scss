@@ -1,0 +1,479 @@
+@import '/public/const.scss';
+
+@keyframes absolute{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fixed{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fixed{
+    position: fixed;
+    animation: fixed .6s ease;
+}
+.absolute{
+    position: fixed;
+    transform: translateY(-100%);
+}
+.offcanvas{
+    border-left: none !important;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: black !important;
+    backdrop-filter: blur(30px);
+    width: 100%;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+        a{
+            color: whitesmoke;
+            transition: .2s ease;
+            font-weight: 300;
+        }
+        a:hover{
+            color: #D2B48C;
+        }
+        .logo-container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+            img{
+                height: 56px;
+            }
+            .name{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: whitesmoke;
+                span:nth-child(1){
+                    font-family: 'Montserrat';
+                    font-size: 28px;
+                    font-weight: 300;
+                }
+                span:nth-child(2){
+                    font-size: 10px;
+                    margin-top: -8px;
+                }
+            }
+        }
+        .contacts-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            .line{
+                width: 2px;
+                height: 18px;
+                background-color: whitesmoke;
+                border-radius: 2px;
+            }
+            .icons{
+                display: flex;
+                fill: whitesmoke;
+                flex-direction: row;
+                align-items: center;
+                a{
+                    transition: .3s ease;
+                    svg{
+                        transition: .3s ease;
+                    }
+                }
+                a:hover{
+                    svg{
+                        fill: #D2B48C;
+                    }
+                }
+            }
+            .tel{
+                display: flex;
+                align-items: center;
+                transition: .3s ease;
+                cursor: pointer;
+                svg{
+                    height: 26px;
+                    margin-top: 4px;
+                    width: fit-content;
+                }
+                a{
+                    text-wrap: nowrap;
+                    font-weight: 300;
+                }
+            }
+            .tel:hover{
+                color: #D2B48C;
+            }
+            svg{
+                width: 32px;
+                height: 32px;
+                margin-top: 2px;
+                cursor: pointer;
+            }
+        }
+        .footer-contacts{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+            justify-content: center;
+            .links{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                fill: whitesmoke;
+                color: whitesmoke;
+                padding: 5px 5px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+                .icon{
+                    width: 70px;
+                    height: 50px;
+                    padding: 5px 5px;
+                    color: whitesmoke;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        fill: whitesmoke;
+                        height: 30px;
+                    }
+                }
+                .icon:nth-child(1){
+                    svg{
+                        height: 35px;
+                    }
+                }
+                .icon:nth-child(2){
+                    svg{
+                        height: 25px;
+                    }
+                }
+                .icon:nth-child(3){
+                    svg{
+                        height: 35px;
+                    }
+                }
+                .icon:nth-child(4){
+                    svg{
+                        height: 29px;
+                    }
+                }
+                .icon:hover{
+                    border-bottom: 1px solid black;
+                    border-top: 1px solid black;
+                }
+            }
+            P{
+                margin: 15px 0 10px;
+            }
+            a{
+                text-transform: none;
+                transition: .3s ease;
+            }
+            a:hover{
+                color: #D2B48C;
+            }
+            .link-more{
+                border: 2px solid #D2B48C;
+                background-color: transparent;
+                font-family: inherit;
+                letter-spacing: inherit;
+                font-size: 14px;
+                margin-right: 0;
+                cursor: pointer;
+                color: whitesmoke;
+                span{
+                    z-index: 1;
+                    transition: transform .3s ease;
+                    font-weight: 300;
+                }
+            }
+            .link-more::before{
+                background-color: #D2B48C;
+                z-index: 0;
+            }
+            .link-more:hover{
+                color: whitesmoke;
+                span{
+                    transform: translateX(-5px);
+                }
+                svg{
+                    transform: translateX(5px) scaleX(1.3);
+                }
+            }
+        }
+    }
+}
+header {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 10%;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+    animation: absolute .6s ease;
+    // backdrop-filter: blur(1px);
+    // background-color: rgba(0, 0, 0, 0.155);
+    
+    &.darkened {
+        background-color: rgba(0, 0, 0, 0.5); // Более темный фон при прокрутке вверх
+        backdrop-filter: blur(5px); // Увеличиваем размытие
+    }
+    .btn-menu{
+        display: none;
+        background: transparent;
+        border: none;
+        svg{
+            width: 30px;
+            height: 30px;
+            fill: whitesmoke;
+        }
+    }
+    .contacts-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        .line{
+            width: 2px;
+            height: 18px;
+            background-color: whitesmoke;
+            border-radius: 2px;
+        }
+        .icons{
+            display: flex;
+            fill: whitesmoke;
+            flex-direction: row;
+            align-items: center;
+            a{
+                transition: .3s ease;
+                svg{
+                    transition: .3s ease;
+                }
+            }
+            a:hover{
+                svg{
+                    fill: #D2B48C;
+                }
+            }
+        }
+        .tel {
+            display: flex;
+            align-items: center;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .tel svg {
+            height: 26px;
+            color: whitesmoke;
+            margin-top: 4px;
+            width: fit-content;
+            transition: 0.3s ease; /* Добавляем плавный переход для иконки */
+        }
+        
+        .tel a {
+            text-wrap: nowrap;
+            color: whitesmoke;
+            font-weight: 300;
+            transition: 0.3s ease; /* Добавляем плавный переход для текста */
+        }
+        
+        /* Изменяем цвет текста и иконки при наведении */
+        .tel:hover a {
+            color: #D2B48C; /* или используйте hex-код, например, #FFA500 */
+        }
+        
+        .tel:hover svg {
+            color: #D2B48C; /* или используйте hex-код, например, #FFA500 */
+        }
+        svg{
+            width: 32px;
+            height: 32px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+    }
+    .logo-container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: end;
+        img{
+            height: 66px;
+        }
+        .name{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            span:nth-child(1){
+                font-family: 'Montserrat';
+                font-size: 33px;
+                font-weight: 300;
+                color: whitesmoke;
+            }
+            span:nth-child(2){
+                font-size: 9px;
+                text-align: center;
+                font-weight: 300;
+                margin-top: -8px;
+                color: whitesmoke;
+            }
+        }
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+        a{
+            color: whitesmoke;
+            transition: .2s ease;
+            font-weight: 300;
+        }
+        a:hover{
+            color: #D2B48C;
+        }
+    }
+}
+@media(max-width:1600px) {
+    header{
+        padding: 10px 5%;
+    }
+}
+@media(max-width:1100px){
+    header{
+        padding: 10px 2%;
+    }
+}
+@media(max-width:992px){
+    header{
+        padding: 12px 4%;
+        .btn-menu{
+            display: block;
+        }
+        .contacts-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            display: none;
+            .line{
+                width: 2px;
+                height: 18px;
+                background-color: whitesmoke;
+                border-radius: 2px;
+            }
+            .icons{
+                display: flex;
+                fill: whitesmoke;
+                flex-direction: row;
+                align-items: center;
+                a{
+                    transition: .3s ease;
+                    svg{
+                        transition: .3s ease;
+                    }
+                }
+                a:hover{
+                    svg{
+                        fill: #D2B48C;
+                    }
+                }
+            }
+            .tel{
+                display: flex;
+                align-items: center;
+                transition: .3s ease;
+                cursor: pointer;
+                svg{
+                    height: 26px;
+                    margin-top: 4px;
+                    width: fit-content;
+                }
+                a{
+                    text-wrap: nowrap;
+                    font-weight: 300;
+                }
+            }
+            .tel:hover{
+                color: #D2B48C;
+            }
+            svg{
+                width: 32px;
+                height: 32px;
+                margin-top: 2px;
+                cursor: pointer;
+            }
+        }
+        .logo-container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-self: flex-start;
+            img{
+                height: 55px;
+            }
+            .name{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: whitesmoke;
+                span:nth-child(1){
+                    font-family: 'Montserrat';
+                    font-size: 33px;
+                    font-weight: 300;
+                    line-height: 120%;
+                }
+                span:nth-child(2){
+                    font-size: 9px;
+                    margin-top: -8px;
+                }
+            }
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            gap: 26px;
+            display: none;
+            a{
+                color: whitesmoke;
+                transition: .2s ease;
+                font-weight: 300;
+            }
+            a:hover{
+                color: #D2B48C;
+            }
+        }
+        .mob{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

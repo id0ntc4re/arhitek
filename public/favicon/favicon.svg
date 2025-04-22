@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="512.0px" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="512.0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="arhiteklogo">
+<path d="M2 63.4709C2 28.4169 30.4169 0 65.4709 0L446.529 0C481.583 0 510 28.4169 510 63.4709L510 444.529C510 479.583 481.583 508 446.529 508L65.4709 508C30.4169 508 2 479.583 2 444.529L2 63.4709Z" fill="#2c2c2c" fill-rule="nonzero" opacity="1" stroke="none"/>
+<g opacity="1">
+<path d="M256.049 72.7425L313.267 156.189L198.83 156.218L256.049 72.7425Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M179.764 184.041L332.358 184.037L370.46 239.688L141.623 239.689L179.764 184.041Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M122.55 267.516L389.544 267.514L484.898 406.642L370.459 406.639C359.368 353.834 310.508 322.89 256.08 322.629C205.315 323.165 148.638 354.539 141.774 406.558L27.1017 406.531L122.55 267.516Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</g>
+</svg>

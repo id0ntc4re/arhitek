@@ -1,0 +1,276 @@
+@import '/public/const.scss';
+
+@keyframes fon {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes slogan1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes podslogan1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slogan2 {
+    0%{
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes podslogan2 {
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(25%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes experience {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes button {
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+.hero-video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    bottom: 0;
+    z-index: -10;
+    animation: backgroundMove .5s ease;
+    -webkit-animation: backgroundMove .5s ease;
+}
+
+.hero{
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-shadow: 0px -95vh 100vh -5vh rgba(8, 14, 19, 0.55) inset;
+    -moz-box-shadow: 0px -95vh 100vh -5vh rgba(8, 14, 19, 0.55) inset;
+    box-shadow: 0px -95vh 100vh -5vh rgba(3, 7, 8, 0.55) inset;
+    overflow: hidden;
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 15vh;
+        gap: 30px;
+
+        .slogan{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .slogan-bottom{
+                h1{
+                    font-size: 48px;
+                    text-transform: uppercase;
+                    font-weight: 200;
+                    color: whitesmoke;
+                    animation: slogan2 1s ease;
+                }
+                
+                h2.experience {
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    color: whitesmoke;
+                    animation: experience 1s ease;
+                    font-family: var(--font-family); // You can change this in your variables
+                }
+            }
+        }
+
+        .bottom-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+
+            button{
+                font-family: inherit;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: 200;
+                background: hsla(0, 0%, 100%, 0);
+                backdrop-filter: blur(5px);
+                border: 1px solid $beige;
+                border-radius: 5px;
+                padding: 15px 40px;
+                cursor: pointer;
+                transition: .3s ease;
+                color: whitesmoke;
+                animation: button 1s ease;
+            }
+
+            button:hover{
+                background-color: #D2B48C;
+                border: 1px solid #D2B48C;
+            }
+        }
+    }
+}
+
+@media(max-width:1600px){
+    .hero{
+        .hero-content{
+            .slogan{
+                .slogan-bottom{
+                    h1{
+                        font-size: 42px;
+                    }
+                    h2.experience {
+                        font-size: 22px;
+                    }
+                }
+            }
+            .bottom-row {
+                button{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1175px){
+    .hero{
+        .hero-content{
+            .slogan{
+                .slogan-bottom{
+                    h1{
+                        font-size: 36px;
+                    }
+                    h2.experience {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .bottom-row {
+                button{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:995px){
+    .hero{
+        .hero-content{
+            .slogan{
+                .slogan-bottom{
+                    h1{
+                        font-size: 32px;
+                    }
+                    h2.experience {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .bottom-row {
+                button{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:692px){
+    .hero{
+        .hero-content{
+            .slogan{
+                .slogan-bottom{
+                    h1{
+                        font-size: 28px;
+                    }
+                    h2.experience {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .bottom-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                button{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
