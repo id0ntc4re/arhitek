@@ -1,21 +1,21 @@
-'use client'
-import './Consultation.scss';
-import React, { useState } from 'react';
-import Image from 'next/image';
+"use client";
+import "./Consultation.scss";
+import React, { useState } from "react";
+import Image from "next/image";
 
 function Consultation() {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: ''
+    name: "",
+    phone: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -25,23 +25,23 @@ function Consultation() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/consultation', {
-        method: 'POST',
+      const response = await fetch("/api/consultation", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', phone: '' });
+        setSubmitStatus("success");
+        setFormData({ name: "", phone: "" });
       } else {
-        throw new Error('Ошибка при отправке');
+        throw new Error("Ошибка при отправке");
       }
     } catch (error) {
-      console.error('Ошибка:', error);
-      setSubmitStatus('error');
+      console.error("Ошибка:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -53,13 +53,16 @@ function Consultation() {
         <div className="consultation-wrapper">
           {/* Блок с контентом и формой */}
           <div className="consultation-content">
-            <h1 className="consultation-main-title">Консультация специалиста</h1>
+            <h1 className="consultation-main-title">
+              Консультация специалиста
+            </h1>
             <h2 className="consultation-title">Давайте обсудим ваши задачи?</h2>
-            
+
             <p className="consultation-description">
-                Рассчитаю сроки и стоимость под ключ, предложу готовые и индивидуальные проекты, оптимизирую бюджет без потери качества
+              Рассчитаю сроки и стоимость под ключ, предложу готовые и
+              индивидуальные проекты, оптимизирую бюджет без потери качества
             </p>
-            
+
             <form onSubmit={handleSubmit} className="consultation-form">
               <div className="form-group">
                 <label>Имя</label>
@@ -73,7 +76,7 @@ function Consultation() {
                   className="form-input"
                 />
               </div>
-              
+
               <div className="form-group">
                 <label>Телефон</label>
                 <input
@@ -87,20 +90,24 @@ function Consultation() {
                   pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
                 />
               </div>
-              
-              <button 
-                type="submit" 
+
+              <button
+                type="submit"
                 className="submit-button"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Отправка...' : 'Перезвоните мне'}
+                {isSubmitting ? "Отправка..." : "Перезвоните мне"}
               </button>
 
-              {submitStatus === 'success' && (
-                <p className="form-message success">Спасибо! Мы скоро вам перезвоним</p>
+              {submitStatus === "success" && (
+                <p className="form-message success">
+                  Спасибо! Мы скоро вам перезвоним
+                </p>
               )}
-              {submitStatus === 'error' && (
-                <p className="form-message error">Ошибка отправки. Попробуйте еще раз</p>
+              {submitStatus === "error" && (
+                <p className="form-message error">
+                  Ошибка отправки. Попробуйте еще раз
+                </p>
               )}
             </form>
           </div>
@@ -108,8 +115,8 @@ function Consultation() {
           {/* Блок с изображением и подписью (для всех версий) */}
           <div className="consultation-image-section">
             <div className="consultation-image">
-              <Image 
-                src="/consultation/orig.webp" 
+              <Image
+                src="/Consultation/orig.webp"
                 alt="Консультация специалиста"
                 width={500}
                 height={400}

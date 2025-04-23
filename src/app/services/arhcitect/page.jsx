@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Form from "../../../../components/Home/Form/Form";
+// import Form from "../../../../components/Home/Form/Form";
 import '../servicesinfo.scss'
 
 
@@ -249,7 +249,7 @@ export default function Arhcitect() {
           </div>
         </div>
       </div>
-      <Form />
+      {/* <Form /> */}
     </>
   );
 }
