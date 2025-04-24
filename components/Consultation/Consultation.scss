@@ -5,8 +5,8 @@
     font-family: inherit;
   
     .consultation-container {
-      max-width: 80%;
-      width: 80%;
+      max-width: 1500px;
+      width: 90%;
       margin: 0 auto;
     }
   
@@ -71,6 +71,7 @@
         width: 100%;
         padding: 15px 20px;
         border: 1px solid #ddd;
+        background-color: transparent;
         border-radius: 6px;
         font-size: 1rem;
         transition: all 0.3s;

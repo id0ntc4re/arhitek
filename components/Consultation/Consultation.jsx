@@ -116,7 +116,7 @@ function Consultation() {
           <div className="consultation-image-section">
             <div className="consultation-image">
               <Image
-                src="/Consultation/orig.webp"
+                src="/Home/arhitector.jpg"
                 alt="Консультация специалиста"
                 width={500}
                 height={400}

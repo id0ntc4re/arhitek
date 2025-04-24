@@ -5,7 +5,8 @@
     margin-bottom: 100px;
   
     .banks-partners-container {
-      max-width: 80%;
+      max-width: 1500px;
+      width: 90%;
       margin: 0 auto;
   
       @media (max-width: 767px) {
@@ -35,7 +36,6 @@
       padding-right: 20px;
   
       .banks-title {
-        font-size: 44px;
         color: #333;
         margin-bottom: 12px;
         font-weight: 100;

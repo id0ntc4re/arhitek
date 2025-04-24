@@ -56,7 +56,7 @@ export default function Advantages() {
           </button>
         </div>
         <Image
-          src={"/Home/обласов.png"}
+          src={"/Home/director.jpg"}
           alt="Александр Обласов, руководитель компании АРХИТЕК"
           width={500}
           height={600}

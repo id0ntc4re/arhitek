@@ -3,8 +3,8 @@ import "./globals.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Bootstrap from "../../components/Bootstrap/Bootstrap";
-import './catalog/Catalog.scss'
-import './portfolio/MainPort.scss'
+// import './catalog/CatalogPage.scss'
+// import './portfolio/MainPort.scss'
 import ModalForm from "../../components/ModalForm/ModalForm";
 import Confidentiality from "../../components/Confidentiality/confidentiality";
 import '../../components/ModalForm/ModalForm.scss'

@@ -7,14 +7,15 @@ $input-text: #000000;
 
 // Основные стили
 .quizContainer {
-  max-width: 80%;
-  width: 100%;
-  margin: 2rem auto;
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem 8rem; 
-  height: 700px;
+  padding: 2rem 8rem;
+  min-height: 700px; 
+  // height: 700px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -25,12 +26,10 @@ $input-text: #000000;
   
 
   h1 {
-    margin-bottom: 2rem;
-    font-size: 48px;
     color: #333;
     font-weight: 100;
-    font-weight: 100;
-    margin-bottom: 10px;
+    font-weight: 100; 
+    margin-bottom: 50px;
     text-transform: uppercase;
   }
 }
@@ -57,7 +56,7 @@ $input-text: #000000;
 // Стили для шага 1 (технологии)
 .techOptions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
@@ -74,7 +73,7 @@ $input-text: #000000;
 
 .techImage {
   width: 100%;
-  height: 220px;
+  height: 350px;
   object-fit: cover;
   background-size: cover;
   border-radius: 8px;

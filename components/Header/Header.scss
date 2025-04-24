@@ -226,18 +226,21 @@
     }
 }
 header {
-    display: flex;
     position: fixed;
     z-index: 10;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12px 10%;
-    align-items: center;
     transition: transform 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
     animation: absolute .6s ease;
-    // backdrop-filter: blur(1px);
-    // background-color: rgba(0, 0, 0, 0.155);
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1500px;
+        padding: 12px 0;
+    }
     
     &.darkened {
         background-color: rgba(0, 0, 0, 0.5); // Более темный фон при прокрутке вверх
@@ -361,19 +364,18 @@ header {
         }
     }
 }
-@media(max-width:1600px) {
-    header{
-        padding: 10px 5%;
+@media(max-width: 1250px) {
+    .header-container{
+        font-size: 0.8rem;
     }
 }
-@media(max-width:1100px){
-    header{
-        padding: 10px 2%;
+@media(max-width: 1050px){
+    .header-container{
+        font-size: 0.7rem;
     }
 }
-@media(max-width:992px){
+@media(max-width: 992px){
     header{
-        padding: 12px 4%;
         .btn-menu{
             display: block;
         }
